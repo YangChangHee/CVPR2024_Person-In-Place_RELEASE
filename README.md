@@ -5,7 +5,7 @@
 * The current version is V 1.0 and we will continue to update it.
 * We plan to add more and more applications, so please stay tuned!
 * Main Paper: Will be re-uploaded after finalizing the camera-ready revisions.
-* Project Page: https://anonymous.4open.science/w/Person-in-Place_page-67F1/
+* Project Page: https://yangchanghee.github.io/Person-in-Place_page/
 
 ![front_figur](./assets/our_results_total_v6.jpg)
 Human-object interaction (HOI) image editing using generated skeleton: We synthesize human interacting with objects for
