@@ -1,0 +1,13 @@
+pip install opencv-python
+pip install pycocotools
+pip install torchgeometry
+pip install git+https://github.com/scottandrews/chumpy.git@fe51783e0364bf1e9b705541e7d77f894dd2b1ac
+pip install pyyaml==5.4.1
+pip install easydict
+pip install tqdm
+pip install einops
+pip install yacs
+pip install timm
+pip install transforms3d
+pip install numpy==1.23
+#pip install diffusers==0.12.1

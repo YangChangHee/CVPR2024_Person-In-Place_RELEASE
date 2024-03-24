@@ -1,0 +1,30 @@
+#trainset_2d: ['MSCOCO',"LSP","MPII"]
+trainset_2d: ["V_COCO"]
+testset: 'V_COCO' # V_COCO, Object
+demo: True
+lr_dec_epoch: [70,120]
+end_epoch: 180
+lr: 0.0001
+lr_backbone: 0.0001
+lr_dec_factor: 10
+#vis: True
+eval_thr: 0.1
+backbone: 'resnet'
+hrnet_type: 18 # 18 32 48 64
+resnet_type: 101
+filtering_mask: False
+obj_bbox_factor: 0.1 # 1#0.1 # 작게할수록 scale이 커짐 작을수록 obj 사이즈가 작아짐
+bbox_factor_param: 1 # 8
+filtering_param: 0.3
+filtering_feature: False
+roi: False
+GCN_feature: False # True
+GCN_Model: "GNN" # GNN, GCN, VIG, GAT
+selection_skt: 'diffusion' # 'GCN'
+using_gt: False
+pretrianed: False # True
+diffusion: True
+GCN_dim: 1
+Top: 17
+image_feature: True
+dif_cs: 32
