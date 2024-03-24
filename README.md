@@ -2,7 +2,8 @@
 
 ## Upcoming Updates
 
-* Demos, tutorials, and inference code are scheduled to be released by mid-March.
+* The current version is V 1.0 and we will continue to update it.
+* We plan to add more and more applications, so please stay tuned!
 * Main Paper: Will be re-uploaded after finalizing the camera-ready revisions.
 * Project Page: https://anonymous.4open.science/w/Person-in-Place_page-67F1/
 
@@ -109,7 +110,7 @@ Enjoy to your heart's content!
 ![front_figur](./assets/output.gif)  
 
 
-# Training Object-Interaction Skeleton
+# Testing Object-Interaction Skeleton
 Download [here](https://drive.google.com/file/d/1l-giuZKG28X5VXlIZYC7dquwTGPdEVW5/view?usp=sharing) and you can check our dataset (based-on V-COCO)  
 
 and testing code (On object interaction skeleton enviroments)
