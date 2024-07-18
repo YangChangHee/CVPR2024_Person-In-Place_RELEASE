@@ -81,6 +81,7 @@ with gr.Blocks().queue() as demo:
     def merge_images(input_image, guidance_image):
         inp_image = cv2.imread(input_image)
         gid_image = cv2.imread(guidance_image)
+        gid_image = cv2.resize(gid_image , (inp_image.shape[1] , inp_image.shape[0]))
         alpha = 0.5
         img_list = []
 

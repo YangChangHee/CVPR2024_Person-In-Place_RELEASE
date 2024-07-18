@@ -100,7 +100,7 @@ class Config:
 
     def update(self, config_file):
         with open(config_file) as f:
-            exp_config = edict(yaml.load(f))
+            exp_config = edict(yaml.safe_load(f))
             for k, v in exp_config.items():
                 if hasattr(cfg, k):
                     setattr(cfg, k, v)
