@@ -249,6 +249,17 @@ class StableDiffusionControlNetInpaintPipeline(StableDiffusionControlNetPipeline
         # aligning device to prevent device errors when concating it with the latent model input
         masked_image_latents = masked_image_latents.to(device=device, dtype=dtype)
         return mask, masked_image_latents
+    def _default_height_width(self, height, width, control_image):
+
+        if isinstance(control_image, list):
+            control_image = control_image[0]
+        if isinstance(control_image, torch.Tensor):
+            img_height, img_width = control_image.shape[-2:]
+        elif isinstance(control_image, Image.Image):
+            img_width, img_height = control_image.size
+        else:
+            raise ValueError("control_image must be a torch.Tensor or PIL.Image.Image or a list of these types")
+        return img_height , img_width
     
     @torch.no_grad()
     @replace_example_docstring(EXAMPLE_DOC_STRING)
@@ -362,7 +373,7 @@ class StableDiffusionControlNetInpaintPipeline(StableDiffusionControlNetPipeline
 
         # 1. Check inputs. Raise error if not correct
         self.check_inputs(
-            prompt, control_image, height, width, callback_steps, negative_prompt, prompt_embeds, negative_prompt_embeds
+            prompt, control_image, callback_steps, negative_prompt, prompt_embeds, negative_prompt_embeds
         )
 
         # 2. Define call parameters
